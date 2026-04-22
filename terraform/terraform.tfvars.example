@@ -1,0 +1,39 @@
+# Copy this file to terraform.tfvars and fill in your values.
+# NEVER commit terraform.tfvars — it is listed in .gitignore.
+
+environment         = "prod"
+location            = "eastus"
+resource_group_name = "rg-platform-prod"
+log_retention_days  = 30
+
+vnet_address_space           = ["10.0.0.0/16"]
+aks_subnet_cidr              = "10.0.1.0/24"
+pod_subnet_cidr              = "10.0.2.0/23"
+private_endpoint_subnet_cidr = "10.0.4.0/24"
+
+kubernetes_version = "1.28"
+
+system_node_pool = {
+  vm_size    = "Standard_D4s_v5"
+  node_count = 2
+  min_count  = 2
+  max_count  = 5
+}
+
+workload_node_pool = {
+  vm_size   = "Standard_D8s_v5"
+  min_count = 2
+  max_count = 20
+}
+
+# Azure AD group object IDs that receive cluster-admin RBAC
+admin_group_object_ids = [
+  "00000000-0000-0000-0000-000000000001"
+]
+
+tags = {
+  ManagedBy   = "Terraform"
+  Project     = "platform-bootstrap"
+  CostCenter  = "engineering"
+  Owner       = "platform-team"
+}

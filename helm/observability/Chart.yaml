@@ -1,0 +1,11 @@
+apiVersion: v2
+name: observability
+description: Prometheus and Grafana observability stack for AKS platform
+type: application
+version: 1.2.0
+appVersion: "2.49.0"
+
+dependencies:
+  - name: kube-prometheus-stack
+    version: "56.6.2"
+    repository: https://prometheus-community.github.io/helm-charts

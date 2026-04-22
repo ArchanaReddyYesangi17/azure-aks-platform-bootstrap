@@ -1,0 +1,39 @@
+# Terraform
+.terraform/
+.terraform.lock.hcl
+*.tfstate
+*.tfstate.backup
+*.tfplan
+tfplan
+terraform.tfvars
+environments/*.tfvars
+*.tfvars.json
+override.tf
+*_override.tf
+
+# Secrets
+*.pem
+*.key
+*credentials*
+.env
+.env.*
+
+# Kubernetes / Azure
+kubeconfig
+*.kubeconfig
+.azure/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE
+.vscode/
+.idea/
