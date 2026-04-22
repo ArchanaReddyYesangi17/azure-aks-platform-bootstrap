@@ -266,12 +266,6 @@ Pre-built dashboards included:
 
 ---
 
-## License
-
-MIT License — see [LICENSE](LICENSE) for details.
-
----
-
 *Built with expertise in enterprise Azure platform engineering, AKS operations, and DevSecOps practices.*
 =======
 # azure-aks-platform-bootstrap
